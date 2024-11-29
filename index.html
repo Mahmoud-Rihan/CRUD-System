@@ -1,0 +1,61 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body >
+    <div class="w-75 mx-auto py-5">
+        <h2 class="py-3 fw-bolder">Product System </h2>
+
+        <label for="productNameInput">Product Name <span class="text-danger">*</span> :</label>
+        <input type="text" class="form-control mb-2 " id="productNameInput"/>
+        <div id="alertName" class="alert alert-danger p-1 mt-2 d-none">Should start with "Capital" and included from 2:9 character, ex " Oppo " </div>
+        
+        <label for="productPriceInput">Product Price <span class="text-danger">*</span> :</label>
+        <input type="number" class="form-control mb-2" id="productPriceInput"/>
+        <div id="alertPrice" class="alert alert-danger p-1 mt-2 d-none">Should start with "Number" from 10:99999, ex " 1000 " </div>
+        
+        <label for="productCategroyInput">Product Categroy <span class="text-danger">*</span> :</label>
+        <input type="text" class="form-control mb-2" id="productCategeroyInput"/>
+        <div id="alertCategroy" class="alert alert-danger p-1 mt-2 d-none">Should start with "Capital" and included from 2:9 character, ex " Mobile " </div>
+        
+        <label for="productDescriptionInput">Product Description :</label>
+        <textarea type="text" class="form-control mb-2" id="productDescriptionInput"></textarea>
+
+        <button disabled  onclick="addProduct()" id="addBtn" class="btn btn-info">Add Product</button>
+        <button onclick="updateProduct(updateFormIndex)" id="updateBtn" class="btn d-none btn-outline-warning">Update Product</button>
+
+    </div>
+    <div class="w-75 mx-auto px-5">
+        <label for="search">Search :</label>
+        <input oninput="searchProduct(this.value)" placeholder="search by name" type="text" class="form-control mb-2 " id="search"/>
+
+    </div>
+    <table  class="table w-75 m-auto">
+        <thead>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Categroy</th>
+            <th>Product Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+        
+        
+    </table>
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
